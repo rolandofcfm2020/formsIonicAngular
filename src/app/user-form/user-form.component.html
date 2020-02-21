@@ -1,0 +1,49 @@
+<ion-row>
+  <ion-col size="6">
+  <ion-item>
+    <ion-label color="primary">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="user.name" name="title" required></ion-input>
+  </ion-item>
+</ion-col>
+<ion-col size="6">
+  <ion-item>
+    <ion-label color="primary">Apellido</ion-label>
+    <ion-input type="text" [(ngModel)]="user.lastName" name="title"></ion-input>
+  </ion-item>
+</ion-col>
+</ion-row>
+<ion-row>
+  <ion-col size="6">
+    <ion-item>
+      <ion-label color="primary">Correo</ion-label>
+      <ion-textarea [(ngModel)]="user.email" name="description" required></ion-textarea>
+    </ion-item>
+  </ion-col>
+  <ion-col size="6">
+  <ion-item>
+    <ion-label color="primary">Actualmente estudiando</ion-label>
+    <ion-checkbox [(ngModel)]="user.isStudent" color="primary"></ion-checkbox>
+  </ion-item>
+</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col size="6">
+  <ion-item>
+    <ion-label color="primary">Password</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password" required></ion-input>
+  </ion-item>
+</ion-col>
+<ion-col size="6">
+  <ion-item>
+    <ion-label color="primary">Confirma password</ion-label>
+    <ion-input type="password" [(ngModel)]="user.passwordConfirmation"  required></ion-input>
+  </ion-item>
+</ion-col>
+</ion-row>
+
+  <br />
+  <br />
+  <ion-button color="danger" (click)="clearData()">Borrar</ion-button>
+  <ion-button color="primary" (click)="logForm()">Enviar</ion-button>
+
